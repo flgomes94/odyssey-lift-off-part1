@@ -12,14 +12,16 @@ const typeDefs = gql`
         title: String!
         "the tracker main's author"
         author:Author!
+        "The track's approximate length to complete, in minutes"
+        length: Int
         "illustration to display the track card page detail"
         thumbnail: String
         "the number of modules that this track contains"
-        modulesCount:int
+        modulesCount:Int
     }
     "Author of a completed track"
     type Author {
-        id:!ID
+        id:ID!
         "name of one author"
         name:String!
         "author's profile picture url"
